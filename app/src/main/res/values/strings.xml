@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">User Ojek Online</string>
+    <string name="title_activity_go_ride">Map</string>
+    <string name="title_activity_tracking_driver">Map</string>
+</resources>
