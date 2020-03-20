@@ -35,6 +35,7 @@ import net.growdev.userojekonline.R;
 import net.growdev.userojekonline.helper.DirectionMapsV2;
 import net.growdev.userojekonline.helper.GPSTracker;
 import net.growdev.userojekonline.helper.HeroHelper;
+import net.growdev.userojekonline.helper.MyContants;
 import net.growdev.userojekonline.helper.SessionManager;
 import net.growdev.userojekonline.view.waitingdriver.WaitingDriverActivity;
 
@@ -170,6 +171,7 @@ public class GoRideActivity extends FragmentActivity implements OnMapReadyCallba
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.imgpick:
+                startActivityForResult(new Intent(GoRideActivity.this, MapsActivity.class),0);
                 break;
             case R.id.lokasiawal:
                 setLokasi(1);
@@ -262,6 +264,29 @@ public class GoRideActivity extends FragmentActivity implements OnMapReadyCallba
 
             } else if (resultCode == RESULT_CANCELED){
                 Toast.makeText(this, "batal ambil lokasi tujuan", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        if (data == null) {
+            Toast.makeText(this, "no data", Toast.LENGTH_SHORT).show();
+            return;
+
+        } else {
+
+
+            switch (resultCode) {
+                case MyContants.LOKASI:
+                    Bundle resultData = data.getExtras();
+                    namaLokasiAwal = resultData.getString("value");
+                    latAwal = resultData.getDouble("lat");
+                    lonAwal = resultData.getDouble("lon");
+                    //Implicit intent to make a call
+                    mMap.clear();
+                    lokasiawal.setText(namaLokasiAwal);
+//                    latawal = lati;
+//                    lonawal = longi;
+                    break;
+
             }
         }
     }

@@ -19,6 +19,7 @@ import com.nabinbhandari.android.permissions.Permissions;
 import net.growdev.userojekonline.helper.SessionManager;
 import net.growdev.userojekonline.view.auth.AuthActivity;
 import net.growdev.userojekonline.view.goride.GoRideActivity;
+import net.growdev.userojekonline.view.history.HistoryActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,5 +77,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onGoride(View view) {
         startActivity(new Intent(MainActivity.this, GoRideActivity.class));
+    }
+
+    public void onHistory(View view) {
+        startActivity(new Intent(MainActivity.this, HistoryActivity.class));
+
     }
 }

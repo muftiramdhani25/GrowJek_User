@@ -1,6 +1,7 @@
 package net.growdev.userojekonline.network;
 
 import net.growdev.userojekonline.model.modelauth.ResponseAuth;
+import net.growdev.userojekonline.model.modelhistory.ResponseHistory;
 import net.growdev.userojekonline.model.modelmap.ResponseMap;
 import net.growdev.userojekonline.model.modelreqorder.ResponseBooking;
 import net.growdev.userojekonline.model.modeltracking.ResponseTracking;
@@ -60,5 +61,31 @@ public interface ApiService {
     @FormUrlEncoded
     @POST("get_driver")
     Call<ResponseTracking> getTracking(@Field("f_iddriver") String idDriver);
+
+    @FormUrlEncoded
+    @POST("get_booking")
+    Call<ResponseHistory> getDataHistory(@Field("status") String status,
+                                         @Field("f_idUser") String iduser,
+                                         @Field("f_token") String token,
+                                         @Field("f_device") String device);
+
+    @FormUrlEncoded
+    @POST("complete_booking_from_user")
+    Call<ResponseHistory> completeBooking(@Field("f_idUser") String iduser,
+                                          @Field("id") String id,
+                                          @Field("f_token") String token,
+                                          @Field("f_device") String device);
+
+    @FormUrlEncoded
+    @POST("insert_review")
+    Call<ResponseHistory> ratingDriver(@Field("f_idUser") String striduser,
+                                       @Field("f_driver") String stridDriver,
+                                       @Field("f_idBooking") String strIdbooking,
+                                       @Field("f_ratting") String strRatting,
+                                       @Field("f_comment") String strComment,
+                                       @Field("f_token") String f_token,
+                                       @Field("f_device") String f_device);
+
+
 
 }

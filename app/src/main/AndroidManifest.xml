@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -35,8 +35,16 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".view.goride.MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".view.rating.RatingActivity" />
+        <activity
+            android:name=".view.detailorder.DetailOrderActivity"
+            android:label="@string/title_activity_detail_order" />
+        <activity android:name=".view.history.HistoryActivity" />
+        <activity
             android:name=".view.trackingdriver.TrackingDriverActivity"
-            android:label="@string/title_activity_tracking_driver"></activity>
+            android:label="@string/title_activity_tracking_driver" />
         <activity android:name=".view.waitingdriver.WaitingDriverActivity" />
         <activity
             android:name=".view.goride.GoRideActivity"
