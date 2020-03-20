@@ -1,10 +1,8 @@
 package net.growdev.userojekonline.model.modeltracking;
 
 import java.util.List;
-import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 
-@Generated("com.robohorse.robopojogenerator")
 public class ResponseTracking{
 
 	@SerializedName("result")

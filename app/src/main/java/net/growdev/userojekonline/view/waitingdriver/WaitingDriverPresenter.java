@@ -1,6 +1,5 @@
 package net.growdev.userojekonline.view.waitingdriver;
 
-import net.growdev.userojekonline.base.BasePresenter;
 import net.growdev.userojekonline.base.BaseView;
 import net.growdev.userojekonline.model.modelwaiting.ResponseWaiting;
 import net.growdev.userojekonline.network.ApiClient;

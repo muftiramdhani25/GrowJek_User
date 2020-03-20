@@ -15,7 +15,7 @@ public interface WaitingDriverContract {
     }
 
     interface Presenter extends BasePresenter{
-        void cancelBooking(String idBooking, String token, String device);
+        void cancelBooking(String booking, String token, String idBooking);
         void cekStatusBooking(String idBooking);
     }
 }

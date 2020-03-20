@@ -53,7 +53,7 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST("cancel_booking")
-    Call<ResponseWaiting> cancelBooking(@Field("idBooking") String idBooking,
+    Call<ResponseWaiting> cancelBooking(@Field("idbooking") String idBooking,
                                         @Field("f_token") String token,
                                         @Field("f_device") String device);
 

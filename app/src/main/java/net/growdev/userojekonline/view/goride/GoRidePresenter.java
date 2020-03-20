@@ -78,7 +78,7 @@ public class GoRidePresenter implements GoRideContract.Presenter {
                 goRideView.hideLoading();
 
                 if (response.isSuccessful() || response.code() == 200){
-                    Boolean result = response.body().isResult();
+                    boolean result = response.body().isResult();
                     String msg = response.body().getMsg();
 
                     if (result){

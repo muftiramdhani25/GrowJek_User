@@ -1,5 +1,8 @@
 package net.growdev.userojekonline.network;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import net.growdev.userojekonline.helper.MyContants;
 
 import java.util.concurrent.TimeUnit;
@@ -22,10 +25,15 @@ public class ApiClient {
         return client;
     }
 
+    private static Gson initGson(){
+        Gson gson = new GsonBuilder().setLenient().create();
+        return gson;
+    }
+
     private static Retrofit initRetrofit(){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(MyContants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(initGson()))
                 .client(initLogging())
                 .build();
 
