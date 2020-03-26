@@ -7,13 +7,12 @@ import net.growdev.userojekonline.base.BaseView;
 
 public interface SplashScreenContract {
 
-    // bekerja di presenter, dopanggil di activity
+    interface View extends BaseView<BasePresenter>{
+        void pindahActivity();
+    }
+
     interface Presenter extends BasePresenter{
         void delaySplash(long i, LottieAnimationView splashLottie);
     }
 
-    // ditugaskan di presenter, dijalankan di activity
-    interface View extends BaseView<BasePresenter>{
-        void pindahActivity();
-    }
 }

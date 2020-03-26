@@ -87,11 +87,11 @@ public class AuthPresenter implements AuthContract.Presenter {
 
     @Override
     public void onAttach(BaseView view) {
-
+        baseView = view;
     }
 
     @Override
     public void onDetach() {
-
+        baseView = null;
     }
 }

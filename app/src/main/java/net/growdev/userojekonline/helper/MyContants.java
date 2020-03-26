@@ -6,7 +6,7 @@ package net.growdev.userojekonline.helper;
 
 public class MyContants {
 
-    public static final String BASE_URL = "http://192.168.84.227/webser_ojol/api/";
+    public static final String BASE_URL = "https://ojol.dzakyhdr.com/webser_ojol/api/";
     public static final String BASE_MAP_URL = "https://maps.googleapis.com/maps/api/directions/";
     public static final String UPLOAD_URL ="http://192.168.60.6/webser_ojol/api/uploadgambar" ;
     public static final String UPLOAD_UPDATE_URL = "http://192.168.60.6/db_makananlanjutan/uploadupdatemakanan.php";

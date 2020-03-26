@@ -17,7 +17,6 @@ import butterknife.ButterKnife;
 
 public class SplashScreenActivity extends AppCompatActivity implements SplashScreenContract.View {
 
-
     @BindView(R.id.splash_lottie)
     LottieAnimationView splashLottie;
 
